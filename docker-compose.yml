@@ -1,0 +1,12 @@
+version: '2'
+services:
+  shinken:
+    build: shinken-stateful
+    ports:
+      - 50000:50000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    
